@@ -1,0 +1,32 @@
+Steps of DVC HandsOn- 
+
+1. Creating GitHub Repository DeployX_DVC
+2. Clone the Repository in Local Drive 
+3. Open VS Code within Drive
+4. Create a python file – main.py
+5. Copy the code and paste in main.py
+6. Run the file – python main.py
+7. Make the first commit Before DVC
+8. Push the entire code to GitHub - git push origin main
+9. Now Install DVC
+10. Initialize DVC and two files will be created
+11. Creating S3 (Simple Storage Service) as a folder
+12. Now we will add S3 as our Remote REPO - dvc remote add -d myremote S3
+13. check the config Folder under .dvc - URL
+14. Now type - dvc add data ( we want dvc to track it)
+15. Will get error, since git is tracking the data folder already
+16. Type the suggested command to stop data folder tracked by git.
+17. Again Type- dvc add data
+18. check .gitignore, you will the data folder in it.
+19. Make a second commit as 'DVC Initialised' and git push origin main
+20. Push first version of data using dvc type-
+ a. dvc status
+ b. dvc commit
+ c. dvc push
+21. Check S3, it will 3 files 
+22. Let's add S3 folder also in .gitignore  ----> /S3
+23. Now we will push first version of data into git as - 'First Version of Data'
+24. git push origin main
+---------------------------------------------------------------
+25. Now we will make some changes in the data and keep doing dvc push and git push...
+26. Everytime we will make any change in data, our md5 file will update which git is tracking
